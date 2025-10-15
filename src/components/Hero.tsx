@@ -24,7 +24,7 @@ export default function Hero() {
             <a href="/contact" className="inline-flex items-center rounded-sm border border-neutral-700 px-5 py-2.5 text-white text-base hover:bg-neutral-900">Request a Free Consultation</a>
           </div>
         </div>
-        <div className="h-80 md:h-96 rounded-md overflow-hidden border border-neutral-800 bg-neutral-900">
+        <div className="h-96 md:h-[560px] w-full md:w-[380px] rounded-md overflow-hidden border border-neutral-800 bg-neutral-900 mx-auto md:mx-0">
           <Image
             src="/images/heroimage.jpg"
             alt="Freight Logistic LLC - truck dispatching"
