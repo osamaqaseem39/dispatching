@@ -63,6 +63,15 @@ const services: Service[] = [
   },
 ];
 
+function ServiceIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 text-neutral-900" fill="none">
+      <path d="M3 7h13l5 5v5a2 2 0 0 1-2 2H3V7Z" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3 7V5a2 2 0 0 1 2-2h10v4" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
 export default function Services() {
   return (
     <section id="services" className="bg-white">
@@ -71,7 +80,10 @@ export default function Services() {
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((item) => (
             <div key={item.title} className="rounded-md border border-neutral-200 bg-white p-6">
-              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <div className="flex items-center gap-2">
+                <ServiceIcon />
+                <h3 className="font-semibold text-lg text-neutral-900">{item.title}</h3>
+              </div>
               <p className="mt-2 text-sm text-neutral-600">{item.body}</p>
               <p className="mt-4 text-[11px] text-neutral-500">Keywords: {item.keywords}</p>
             </div>
