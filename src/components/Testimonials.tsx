@@ -1,50 +1,60 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const testimonials = [
-  {
-    name: "James P.",
-    role: "Owner-Operator (Texas)",
-    quote:
-      "Freight Logistic LLC keeps me loaded every week! They’re reliable and honest — exactly what a trucker needs.",
-  },
-  {
-    name: "Maria L.",
-    role: "Independent Trucker (California)",
-    quote:
-      "I’ve tried other dispatchers, but these guys are the real deal. Transparent, fast, and always available.",
-  },
-  {
-    name: "Luis R.",
-    role: "Owner-Operator (Dry Van)",
-    quote:
-      "They keep me moving with solid rates and zero forced dispatch. Paperwork is smooth and fast.",
-  },
+type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+};
+
+const testimonials: Testimonial[] = [
+  { name: "James P.", role: "Owner-Operator (Texas)", quote: "Freight Logistic LLC keeps me loaded every week! They’re reliable and honest — exactly what a trucker needs." },
+  { name: "Maria L.", role: "Independent Trucker (California)", quote: "I’ve tried other dispatchers, but these guys are the real deal. Transparent, fast, and always available." },
+  { name: "Luis R.", role: "Owner-Operator (Dry Van)", quote: "They keep me moving with solid rates and zero forced dispatch. Paperwork is smooth and fast." },
+  { name: "Aisha K.", role: "Small Fleet (2 Trucks)", quote: "Communication is top-notch and they always find lanes that fit our schedule. Highly recommend." },
+  { name: "Dmitri S.", role: "Reefer Operator", quote: "Strong rates and clear instructions. They handle brokers so I can focus on driving." },
+  { name: "Sophia R.", role: "Hotshot Driver", quote: "They’re proactive and keep me rolling — no deadhead, no nonsense." },
+  { name: "Omar T.", role: "Step Deck Operator", quote: "Professional and dependable. The paperwork support saves me hours every week." },
+  { name: "Henry C.", role: "Box Truck Owner", quote: "Fast setup and consistent loads. Payments are smooth with their billing help." },
 ];
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
-  function prev() { setIndex((i) => (i - 1 + testimonials.length) % testimonials.length); }
-  function next() { setIndex((i) => (i + 1) % testimonials.length); }
-  const current = testimonials[index];
+
+  // Auto-advance every 4 seconds
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
+
+  const visible = useMemo(() => {
+    const items: Testimonial[] = [];
+    for (let offset = 0; offset < 3; offset++) {
+      items.push(testimonials[(index + offset) % testimonials.length]);
+    }
+    return items;
+  }, [index]);
+
   return (
-    <section className="bg-neutral-950">
+    <section className="bg-neutral-900">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">What Carriers Say</h2>
-        <div className="mt-8 relative">
-          <div className="rounded-md border border-neutral-800 bg-neutral-900 p-6 text-white">
-            <p className="text-neutral-200">“{current.quote}”</p>
-            <div className="mt-4 text-sm text-neutral-400">{current.name} — {current.role}</div>
+        <div className="mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {visible.map((t, i) => (
+              <article key={`${t.name}-${i}`} className="rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors">
+                <p className="text-neutral-200">“{t.quote}”</p>
+                <div className="mt-4 text-sm text-neutral-400">{t.name} — {t.role}</div>
+              </article>
+            ))}
           </div>
-          <div className="mt-4 flex items-center justify-between">
-            <button onClick={prev} className="rounded-full bg-neutral-900 border border-neutral-800 text-white px-3 py-2 hover:bg-black">Prev</button>
-            <div className="flex gap-2">
-              {testimonials.map((_, i) => (
-                <span key={i} className={`h-2.5 w-2.5 rounded-full ${i === index ? "bg-white" : "bg-neutral-700"}`} />
-              ))}
-            </div>
-            <button onClick={next} className="rounded-full bg-neutral-900 border border-neutral-800 text-white px-3 py-2 hover:bg-black">Next</button>
+          <div className="mt-6 flex items-center justify-center gap-2">
+            {testimonials.map((_, i) => (
+              <span key={i} className={`h-2.5 w-2.5 rounded-full ${i === index ? "bg-white" : "bg-neutral-700"}`} />)
+            )}
           </div>
         </div>
       </div>

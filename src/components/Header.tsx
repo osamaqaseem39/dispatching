@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className="border-b border-neutral-800 bg-neutral-950 text-white">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={36} height={36} className="rounded-sm object-cover" />
-          <div className="font-semibold tracking-tight">Freight Logistic LLC</div>
+          <Link href="/" aria-label="Freight Logistic LLC Home">
+            <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={36} height={36} className="rounded-sm object-cover" />
+          </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
           <a href="/services" className="hover:text-white">Services</a>

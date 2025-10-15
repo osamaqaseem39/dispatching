@@ -15,7 +15,7 @@ export default function PersonalizedDispatchSolutionsPage() {
             <p className="mt-3 text-neutral-300 max-w-3xl">Every carrier runs differently — we adapt to your equipment, goals, and schedule.</p>
           </div>
           <div className="h-56 md:h-64 rounded-md overflow-hidden border border-neutral-800 bg-neutral-900">
-            <Image src="/images/services/service8.jpg" alt="Personalized Dispatch Solutions" width={1200} height={800} className="h-full w-full object-cover" />
+            <Image src="/images/service8.jpg" alt="Personalized Dispatch Solutions" width={1200} height={800} className="h-full w-full object-cover" />
           </div>
         </div>
       </section>
@@ -33,6 +33,26 @@ export default function PersonalizedDispatchSolutionsPage() {
             <h2 className="text-xl font-semibold">Get a Plan</h2>
             <p className="mt-2 text-sm text-neutral-700">We’ll create a dispatch approach that balances rate, reliability, and lifestyle.</p>
             <a href="/contact" className="mt-4 inline-flex items-center rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Build My Plan</a>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white border-t border-neutral-200">
+        <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3">
+          <div>
+            <h3 className="text-lg font-semibold">Service Highlights</h3>
+            <ul className="mt-3 text-sm text-neutral-700 space-y-2 list-disc pl-5">
+              <li>Custom lanes and home-time scheduling</li>
+              <li>Equipment-specific freight strategy</li>
+              <li>Clear goals and review cadence</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">Who It’s For</h3>
+            <p className="mt-3 text-sm text-neutral-700">Carriers who want a tailored plan to balance rate, reliability, and lifestyle.</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">Getting Started</h3>
+            <p className="mt-3 text-sm text-neutral-700">Tell us your equipment, lanes, and goals— we’ll build a plan and start booking.</p>
           </div>
         </div>
       </section>

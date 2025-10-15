@@ -15,7 +15,7 @@ export default function Dispatch247Page() {
             <p className="mt-3 text-neutral-300 max-w-3xl">Any time of day or night, we’re available with real-time updates and problem-solving.</p>
           </div>
           <div className="h-56 md:h-64 rounded-md overflow-hidden border border-neutral-800 bg-neutral-900">
-            <Image src="/images/services/service5.jpg" alt="24/7 Dispatch Support" width={1200} height={800} className="h-full w-full object-cover" />
+            <Image src="/images/service5.jpg" alt="24/7 Dispatch Support" width={1200} height={800} className="h-full w-full object-cover" />
           </div>
         </div>
       </section>
@@ -33,6 +33,26 @@ export default function Dispatch247Page() {
             <h2 className="text-xl font-semibold">Stay Moving</h2>
             <p className="mt-2 text-sm text-neutral-700">We resolve issues quickly to minimize delays and keep your trucks earning.</p>
             <a href="/contact" className="mt-4 inline-flex items-center rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Talk to Dispatch</a>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white border-t border-neutral-200">
+        <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-3">
+          <div>
+            <h3 className="text-lg font-semibold">Service Highlights</h3>
+            <ul className="mt-3 text-sm text-neutral-700 space-y-2 list-disc pl-5">
+              <li>24/7 access via phone, email, and text</li>
+              <li>Rapid issue escalation to brokers</li>
+              <li>Live tracking and proactive updates</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">Who It’s For</h3>
+            <p className="mt-3 text-sm text-neutral-700">Carriers running tight schedules who need immediate support at any hour.</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">Getting Started</h3>
+            <p className="mt-3 text-sm text-neutral-700">Share your route plans and preferences so we can monitor and support effectively.</p>
           </div>
         </div>
       </section>

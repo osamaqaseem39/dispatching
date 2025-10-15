@@ -5,6 +5,7 @@ import Cta from "@/components/Cta";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
+import HowItWorks from "@/components/HowItWorks";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Benefits />
+      <HowItWorks />
       <Testimonials />
       <Faq />
       <Cta />

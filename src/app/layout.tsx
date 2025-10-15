@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "Truck Dispatch Services USA – Freight Logistic LLC",
   description:
     "Professional truck dispatching for owner-operators, small fleets, and independent truckers across the USA. Load booking, rate negotiation, paperwork, compliance, and 24/7 support.",
+  icons: {
+    icon: "/images/favicon.ico",
+    shortcut: "/images/favicon.ico",
+    apple: "/images/favicon.ico",
+  },
   openGraph: {
     title: "Truck Dispatch Services USA – Freight Logistic LLC",
     description:
