@@ -77,7 +77,7 @@ export default function Services() {
     <section id="services" className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Our Core Dispatch Services</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((item) => (
             <div key={item.title} className="rounded-md border border-neutral-200 bg-white p-6">
               <div className="flex items-center gap-2">
