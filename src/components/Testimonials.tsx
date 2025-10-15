@@ -1,21 +1,21 @@
 const testimonials = [
   {
+    name: "James P.",
+    role: "Owner-Operator (Texas)",
+    quote:
+      "Freight Logistic LLC keeps me loaded every week! They’re reliable and honest — exactly what a trucker needs.",
+  },
+  {
+    name: "Maria L.",
+    role: "Independent Trucker (California)",
+    quote:
+      "I’ve tried other dispatchers, but these guys are the real deal. Transparent, fast, and always available.",
+  },
+  {
     name: "Luis R.",
     role: "Owner-Operator (Dry Van)",
     quote:
       "They keep me moving with solid rates and zero forced dispatch. Paperwork is smooth and fast.",
-  },
-  {
-    name: "Jasmine K.",
-    role: "Hotshot Carrier",
-    quote:
-      "Transparent, reliable, and responsive 24/7. My best months have been with their loads.",
-  },
-  {
-    name: "Marcus D.",
-    role: "Small Fleet (Flatbed)",
-    quote:
-      "Negotiations are on point. They understand lanes and keep fuel/downtime low with smart routing.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Testimonials() {
                 <span key={i} className={`h-2.5 w-2.5 rounded-full ${i === index ? "bg-white" : "bg-neutral-700"}`} />
               ))}
             </div>
-            <button onClick={next} className="rounded-full bg-neutral-900 border border-neutral-800 text-white px-3 py-2 hover:bg:black">Next</button>
+            <button onClick={next} className="rounded-full bg-neutral-900 border border-neutral-800 text-white px-3 py-2 hover:bg-black">Next</button>
           </div>
         </div>
       </div>

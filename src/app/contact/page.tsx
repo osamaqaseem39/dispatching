@@ -8,10 +8,8 @@ export default function ContactPage() {
     <main className="bg-white text-neutral-900">
       <section className="bg-neutral-950 text-white">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Contact Us</h1>
-          <p className="mt-3 text-neutral-300 max-w-3xl">
-            We respond quickly — dispatchers available 24/7.
-          </p>
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Get in Touch with Freight Logistic LLC</h1>
+          <p className="mt-3 text-neutral-300 max-w-3xl">Ready to grow your trucking business with professional dispatch support? Contact our team today for a free consultation or to start dispatching immediately.</p>
         </div>
       </section>
       <section className="bg-white">
@@ -24,6 +22,10 @@ export default function ContactPage() {
               <li><span className="font-medium">Location:</span> United States</li>
               <li><span className="font-medium">Website:</span> www.freightslogistic.com</li>
             </ul>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="tel:+19498281756" className="inline-flex items-center rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Call Now</a>
+              <a href="mailto:freightlogistic01@gmail.com" className="inline-flex items-center rounded-sm border border-neutral-300 px-4 py-2 text-neutral-900 text-sm hover:bg-neutral-100">Email Us</a>
+            </div>
           </div>
           <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4">
             <div>
@@ -37,6 +39,10 @@ export default function ContactPage() {
             <div>
               <label className="block text-sm font-medium text-neutral-800">Phone</label>
               <input type="tel" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="(###) ### ####" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-neutral-800">Truck Type</label>
+              <input type="text" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Dry Van, Reefer, Flatbed, Hotshot, Box Truck, etc." />
             </div>
             <div>
               <label className="block text-sm font-medium text-neutral-800">Message</label>

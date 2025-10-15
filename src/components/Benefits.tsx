@@ -65,7 +65,7 @@ export default function Benefits() {
     <section id="benefits" className="bg-neutral-950">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Why Choose Freight Logistic LLC?</h2>
-        <p className="mt-3 text-neutral-300 max-w-3xl">More value, more support, more profit — built for carriers.</p>
+        <p className="mt-3 text-neutral-300 max-w-3xl">Transparent pricing, nationwide coverage, and 24/7 experts focused on your profitability.</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {points.map((b) => (
             <div key={b.title} className="rounded-md border border-neutral-800 bg-neutral-900 p-6">
