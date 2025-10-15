@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const faqs = [
   {
     q: "Do you force dispatch?",
@@ -16,10 +20,6 @@ const faqs = [
     a: "We help submit PODs and invoicing promptly so brokers can pay you per their terms.",
   },
 ];
-
-"use client";
-
-import { useState } from "react";
 
 export default function Faq() {
   const [open, setOpen] = useState<string | null>(faqs[0]?.q ?? null);

@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const testimonials = [
   {
     name: "James P.",
@@ -18,10 +22,6 @@ const testimonials = [
       "They keep me moving with solid rates and zero forced dispatch. Paperwork is smooth and fast.",
   },
 ];
-
-"use client";
-
-import { useState } from "react";
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
