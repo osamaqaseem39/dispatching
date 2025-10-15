@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="bg-neutral-950 text-white">
@@ -18,13 +20,15 @@ export default function Hero() {
             <a href="#services" className="inline-flex items-center rounded-sm border border-neutral-700 px-4 py-2 text-white text-sm hover:bg-neutral-900">Explore Services</a>
           </div>
         </div>
-        <div className="h-64 md:h-80 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center">
-          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" className="text-white">
-            <path d="M3 13h2l3 6h8l3-8h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M5 13V7h10l4 4v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="8" cy="20" r="1.5" fill="currentColor" />
-            <circle cx="17" cy="20" r="1.5" fill="currentColor" />
-          </svg>
+        <div className="h-64 md:h-80 rounded-md overflow-hidden border border-neutral-800 bg-neutral-900">
+          <Image
+            src="/images/heroimage.jpg"
+            alt="Freight Logistic LLC - truck dispatching"
+            width={1200}
+            height={800}
+            className="h-full w-full object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
