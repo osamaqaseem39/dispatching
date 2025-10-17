@@ -7,7 +7,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link href="/" aria-label="Freight Logistic LLC Home">
-            <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={36} height={36} className="rounded-sm object-cover" />
+            <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={48} height={48} className="rounded-sm object-cover" />
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
