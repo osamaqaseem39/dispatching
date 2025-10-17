@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-indigo-100">
+    <section className="bg-gradient-to-br from-neutral-50 to-neutral-100">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* Content */}
@@ -27,19 +27,19 @@ export default function AboutUs() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-3xl font-bold text-black mb-2">500+</div>
                 <div className="text-sm text-neutral-600">Active Carriers</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">15+</div>
+                <div className="text-3xl font-bold text-neutral-800 mb-2">15+</div>
                 <div className="text-sm text-neutral-600">Years Experience</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">$2.5M+</div>
+                <div className="text-3xl font-bold text-neutral-700 mb-2">$2.5M+</div>
                 <div className="text-sm text-neutral-600">Monthly Revenue</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">98%</div>
+                <div className="text-3xl font-bold text-neutral-900 mb-2">98%</div>
                 <div className="text-sm text-neutral-600">On-Time Delivery</div>
               </div>
             </div>
@@ -49,8 +49,8 @@ export default function AboutUs() {
               <h3 className="text-xl font-semibold">Our Core Values</h3>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-black font-bold">✓</span>
                   </div>
                   <div>
                     <h4 className="font-semibold">Transparency</h4>
@@ -58,8 +58,8 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-neutral-300 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-black font-bold">✓</span>
                   </div>
                   <div>
                     <h4 className="font-semibold">Reliability</h4>
@@ -67,8 +67,8 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-purple-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-neutral-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">✓</span>
                   </div>
                   <div>
                     <h4 className="font-semibold">Partnership</h4>
@@ -76,8 +76,8 @@ export default function AboutUs() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-orange-600 font-bold">✓</span>
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">✓</span>
                   </div>
                   <div>
                     <h4 className="font-semibold">Innovation</h4>
@@ -138,7 +138,7 @@ export default function AboutUs() {
             </p>
             <a 
               href="/contact" 
-              className="inline-flex items-center rounded-lg bg-blue-600 px-8 py-4 text-white text-lg font-medium hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Started Today
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

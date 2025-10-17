@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white relative overflow-hidden">
       {/* Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-neutral-800/10 via-neutral-700/10 to-neutral-600/10 animate-pulse"></div>
       
       <div className="mx-auto max-w-7xl px-6 py-28 grid gap-12 md:grid-cols-2 items-center relative z-10">
         <div className="space-y-8">
@@ -31,11 +31,11 @@ export default function Hero() {
           <div className="animate-fade-in-up animation-delay-600">
             <ul className="text-base text-neutral-300 space-y-2">
               <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span>Dry Van • Reefer • Flatbed • Step Deck • Hotshot • Box Truck</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-neutral-400 rounded-full"></span>
                 <span>No forced dispatch • Transparent pricing • Nationwide coverage</span>
               </li>
             </ul>
@@ -51,13 +51,13 @@ export default function Hero() {
               </a>
               <a 
                 href="/contact" 
-                className="inline-flex items-center rounded-lg border-2 border-blue-500 px-6 py-3 text-white text-base hover:bg-blue-500 transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 text-white text-base hover:bg-white hover:text-black transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get Started Today
               </a>
               <a 
                 href="/contact" 
-                className="inline-flex items-center rounded-lg border-2 border-green-500 px-6 py-3 text-white text-base hover:bg-green-500 transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center rounded-lg border-2 border-neutral-400 px-6 py-3 text-white text-base hover:bg-neutral-400 hover:text-black transition-all duration-300 transform hover:-translate-y-1"
               >
                 Request Free Consultation
               </a>
@@ -79,10 +79,10 @@ export default function Hero() {
             </div>
             
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold animate-bounce">
+            <div className="absolute -top-4 -right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold animate-bounce">
               🚛 24/7 Support
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
+            <div className="absolute -bottom-4 -left-4 bg-neutral-600 text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
               💰 Higher Rates
             </div>
           </div>

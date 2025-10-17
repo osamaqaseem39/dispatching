@@ -39,7 +39,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-neutral-50 to-blue-50">
+    <section className="bg-gradient-to-br from-neutral-50 to-neutral-100">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">How It Works</h2>
@@ -52,7 +52,7 @@ export default function HowItWorks() {
         {/* Horizontal Timeline */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-indigo-200 transform -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-neutral-300 via-neutral-400 to-neutral-300 transform -translate-y-1/2 hidden lg:block"></div>
           
           {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -62,7 +62,7 @@ export default function HowItWorks() {
                 className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-200"
               >
                 {/* Step Number */}
-                <div className={`absolute -top-4 left-6 w-8 h-8 ${step.color} rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg`}>
+                <div className="absolute -top-4 left-6 w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                   {index + 1}
                 </div>
                 
@@ -72,7 +72,7 @@ export default function HowItWorks() {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-black transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">
@@ -80,7 +80,7 @@ export default function HowItWorks() {
                 </p>
                 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-neutral-500/5 to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
@@ -97,7 +97,7 @@ export default function HowItWorks() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center rounded-lg bg-blue-600 px-8 py-4 text-white text-lg font-medium hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Start Your Free Consultation
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,7 +106,7 @@ export default function HowItWorks() {
               </a>
               <a
                 href="/services"
-                className="inline-flex items-center rounded-lg border-2 border-blue-600 px-8 py-4 text-blue-600 text-lg font-medium hover:bg-blue-600 hover:text-white transition-colors"
+                className="inline-flex items-center rounded-lg border-2 border-black px-8 py-4 text-black text-lg font-medium hover:bg-black hover:text-white transition-colors"
               >
                 View All Services
               </a>

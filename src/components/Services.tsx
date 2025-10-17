@@ -100,10 +100,10 @@ export default function Services() {
                         />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-2xl font-semibold text-neutral-900 group-hover:text-black transition-colors">
                           {item.title}
                         </h3>
-                        <div className="mt-2 text-sm text-blue-600 font-medium">
+                        <div className="mt-2 text-sm text-neutral-600 font-medium">
                           Service #{String(index + 1).padStart(2, '0')}
                         </div>
                       </div>
@@ -113,7 +113,7 @@ export default function Services() {
                       {item.body}
                     </p>
                     
-                    <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
+                    <div className="flex items-center text-black font-medium group-hover:text-neutral-700 transition-colors">
                       <span>Learn more about this service</span>
                       <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -141,7 +141,7 @@ export default function Services() {
         </div>
         
         <div className="text-center mt-16">
-          <a href="/services" className="inline-flex items-center rounded-lg bg-blue-600 px-8 py-4 text-white text-lg font-medium hover:bg-blue-700 transition-colors">
+          <a href="/services" className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors">
             View All Services
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
