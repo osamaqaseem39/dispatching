@@ -90,9 +90,6 @@ export default function ServicesPage() {
                         <h3 className="text-2xl font-semibold text-neutral-900 group-hover:text-black transition-colors">
                           {item.title}
                         </h3>
-                        <div className="mt-2 text-sm text-neutral-600 font-medium">
-                          Service #{String(index + 1).padStart(2, '0')}
-                        </div>
                       </div>
                     </div>
                     

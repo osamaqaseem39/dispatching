@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import Image from "next/image";
+import ScrollAnimation from "./ScrollAnimation";
 
 type Service = {
   title: string;
@@ -75,28 +76,32 @@ export default function Services() {
   return (
     <section id="services" className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Our Professional Dispatch Services</h2>
+        <ScrollAnimation direction="up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Our Professional Dispatch Services</h2>
+        </ScrollAnimation>
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((item) => (
-            <div key={item.title} className="group rounded-md border border-neutral-200 bg-white hover:border-neutral-300 [perspective:1000px]">
-              <a href={`/services/${item.slug}`} className="relative block h-full min-h-[260px] [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
-                {/* Front */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 [backface-visibility:hidden]">
-                  <div className="flex justify-center mb-4">
-                    <Image src={item.imageSrc} alt={item.title} width={64} height={64} className="h-16 w-16 object-contain" />
+          {services.map((item, index) => (
+            <ScrollAnimation key={item.title} direction="up" delay={index * 100}>
+              <div className="group rounded-md border border-neutral-200 bg-white hover:border-neutral-300 [perspective:1000px]">
+                <a href={`/services/${item.slug}`} className="relative block h-full min-h-[260px] [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
+                  {/* Front */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 [backface-visibility:hidden]">
+                    <div className="flex justify-center mb-4">
+                      <Image src={item.imageSrc} alt={item.title} width={64} height={64} className="h-16 w-16 object-contain" />
+                    </div>
+                    <h3 className="text-center font-semibold text-lg text-neutral-900">{item.title}</h3>
                   </div>
-                  <h3 className="text-center font-semibold text-lg text-neutral-900">{item.title}</h3>
-                </div>
-                {/* Back */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-neutral-50 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <h3 className="text-center font-semibold text-lg text-neutral-900">{item.title}</h3>
-                  <p className="mt-2 text-sm text-neutral-600 text-center">{item.body}</p>
-                  <div className="mt-4 text-center">
-                    <span className="inline-block text-sm font-medium text-neutral-900">Learn more →</span>
+                  {/* Back */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-neutral-50 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <h3 className="text-center font-semibold text-lg text-neutral-900">{item.title}</h3>
+                    <p className="mt-2 text-sm text-neutral-600 text-center">{item.body}</p>
+                    <div className="mt-4 text-center">
+                      <span className="inline-block text-sm font-medium text-neutral-900">Learn more →</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
+                </a>
+              </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>
