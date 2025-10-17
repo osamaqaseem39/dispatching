@@ -2,65 +2,117 @@ export default function HowItWorks() {
   const steps = [
     {
       title: "Quick Consultation",
-      body:
-        "Tell us about your equipment, lanes, RPM goals, and schedule. We align on preferences before booking anything.",
+      body: "Tell us about your equipment, lanes, RPM goals, and schedule. We align on preferences before booking anything.",
+      icon: "💬",
+      color: "bg-blue-500"
     },
     {
       title: "Carrier Setup",
-      body:
-        "Complete carrier packets and insurance verification so you’re approved fast with trusted brokers.",
+      body: "Complete carrier packets and insurance verification so you're approved fast with trusted brokers.",
+      icon: "📋",
+      color: "bg-green-500"
     },
     {
       title: "Load Search & Negotiation",
-      body:
-        "We source high-quality freight and negotiate top market rates based on your targets.",
+      body: "We source high-quality freight and negotiate top market rates based on your targets.",
+      icon: "🔍",
+      color: "bg-purple-500"
     },
     {
       title: "Booking & Dispatch",
-      body:
-        "You approve every load. We handle rate cons, pickup details, and clear instructions for each stop.",
+      body: "You approve every load. We handle rate cons, pickup details, and clear instructions for each stop.",
+      icon: "📦",
+      color: "bg-orange-500"
     },
     {
       title: "On‑Road Support 24/7",
-      body:
-        "We manage updates, detention/TONU requests, and broker comms so you can stay focused on driving.",
+      body: "We manage updates, detention/TONU requests, and broker comms so you can stay focused on driving.",
+      icon: "🚛",
+      color: "bg-red-500"
     },
     {
       title: "Invoicing & Follow‑Up",
-      body:
-        "We assist with POD submission, invoicing, and payment follow‑ups for smooth cash flow.",
+      body: "We assist with POD submission, invoicing, and payment follow‑ups for smooth cash flow.",
+      icon: "💰",
+      color: "bg-indigo-500"
     },
   ];
 
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">How It Works</h2>
+    <section className="bg-gradient-to-br from-neutral-50 to-blue-50">
+      <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">How It Works</h2>
+          <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+            A clear, no‑pressure process designed for owner‑operators and small fleets. 
+            No forced dispatch — you stay in control at every step.
+          </p>
+        </div>
 
-        <div className="mt-10 grid gap-10 md:grid-cols-2">
-          <div>
-            <p className="text-sm md:text-base text-neutral-700 max-w-2xl">
-              A clear, no‑pressure process designed for owner‑operators and small fleets. No forced dispatch — you stay in control at every step.
-            </p>
-            <a
-              href="/contact"
-              className="mt-6 inline-flex items-center rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800"
-            >
-              Start in 10 minutes
-            </a>
-          </div>
-
-          <ol className="relative border-l border-neutral-200 pl-6">
+        {/* Horizontal Timeline */}
+        <div className="relative">
+          {/* Connection Line */}
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-indigo-200 transform -translate-y-1/2 hidden lg:block"></div>
+          
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
             {steps.map((step, index) => (
-              <li key={step.title} className="mb-10 last:mb-0">
-                <div className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white text-xs font-medium">
+              <div 
+                key={step.title} 
+                className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-200"
+              >
+                {/* Step Number */}
+                <div className={`absolute -top-4 left-6 w-8 h-8 ${step.color} rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg`}>
                   {index + 1}
                 </div>
-                <h3 className="text-base md:text-lg font-semibold text-neutral-900">{step.title}</h3>
-                <p className="mt-2 text-sm text-neutral-600">{step.body}</p>
-              </li>
+                
+                {/* Icon */}
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {step.icon}
+                </div>
+                
+                {/* Content */}
+                <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  {step.body}
+                </p>
+                
+                {/* Hover Effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
             ))}
-          </ol>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-200">
+            <h3 className="text-2xl font-semibold mb-4">Ready to Get Started?</h3>
+            <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
+              Join hundreds of successful owner-operators who trust us with their dispatch needs. 
+              Start your journey to higher revenue and less stress today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center rounded-lg bg-blue-600 px-8 py-4 text-white text-lg font-medium hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Start Your Free Consultation
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center rounded-lg border-2 border-blue-600 px-8 py-4 text-blue-600 text-lg font-medium hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                View All Services
+              </a>
+            </div>
+            <p className="mt-4 text-sm text-neutral-500">No commitment required • Free initial consultation</p>
+          </div>
         </div>
       </div>
     </section>

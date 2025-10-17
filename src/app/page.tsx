@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AboutUs from "@/components/AboutUs";
 import Benefits from "@/components/Benefits";
 import Cta from "@/components/Cta";
 import Contact from "@/components/Contact";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-neutral-900">
       <Hero />
       <Services />
+      <AboutUs />
       <Benefits />
       <HowItWorks />
       <Testimonials />

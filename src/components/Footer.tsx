@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={40} height={40} className="rounded-sm object-cover" />
+              <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={56} height={56} className="rounded-sm object-cover" />
               <span className="text-lg font-semibold">Freight Logistic LLC</span>
             </div>
             <p className="text-sm text-neutral-300 max-w-xs">
