@@ -1,6 +1,5 @@
 // using inline SVG icons for services
 
-import type { ReactNode } from "react";
 import Image from "next/image";
 import ScrollAnimation from "./ScrollAnimation";
 
