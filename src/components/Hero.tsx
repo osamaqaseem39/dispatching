@@ -46,19 +46,19 @@ export default function Hero() {
             <div className="flex flex-wrap gap-3">
               <a 
                 href="tel:+19498281756" 
-                className="inline-flex items-center rounded-lg bg-white px-6 py-3 text-neutral-950 text-base font-medium hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                className="inline-flex items-center rounded-lg bg-white px-6 py-3 text-neutral-950 text-base font-medium hover:bg-neutral-200 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg animate-glow-pulse-white"
               >
                 📞 Call Now: +1 (949) 828-1756
               </a>
               <a 
                 href="/contact" 
-                className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 text-white text-base hover:bg-white hover:text-black transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 text-white text-base hover:bg-white hover:text-black transition-all duration-300 transform hover:-translate-y-1 animate-glow-pulse-white"
               >
                 Get Started Today
               </a>
               <a 
                 href="/contact" 
-                className="inline-flex items-center rounded-lg border-2 border-neutral-400 px-6 py-3 text-white text-base hover:bg-neutral-400 hover:text-black transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center rounded-lg border-2 border-neutral-400 px-6 py-3 text-white text-base hover:bg-neutral-400 hover:text-black transition-all duration-300 transform hover:-translate-y-1 animate-glow-pulse"
               >
                 Request Free Consultation
               </a>
@@ -80,10 +80,10 @@ export default function Hero() {
             </div>
             
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold animate-bounce">
+            <div className="absolute -top-4 -right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold animate-bounce animate-glow-pulse-white">
               🚛 24/7 Support
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-neutral-600 text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse">
+            <div className="absolute -bottom-4 -left-4 bg-neutral-600 text-white px-4 py-2 rounded-full text-sm font-semibold animate-pulse animate-glow-pulse-green">
               💰 Higher Rates
             </div>
           </div>

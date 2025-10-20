@@ -30,19 +30,19 @@ export default function AboutUs() {
             {/* Stats */}
             <ScrollAnimation direction="up" delay={200}>
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-blue">
                   <div className="text-3xl font-bold text-black mb-2">500+</div>
                   <div className="text-sm text-neutral-600">Active Carriers</div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-green">
                   <div className="text-3xl font-bold text-neutral-800 mb-2">15+</div>
                   <div className="text-sm text-neutral-600">Years Experience</div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-orange">
                   <div className="text-3xl font-bold text-neutral-700 mb-2">$2.5M+</div>
                   <div className="text-sm text-neutral-600">Monthly Revenue</div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-purple">
                   <div className="text-3xl font-bold text-neutral-900 mb-2">98%</div>
                   <div className="text-sm text-neutral-600">On-Time Delivery</div>
                 </div>
@@ -110,7 +110,7 @@ export default function AboutUs() {
               </div>
               
               {/* Floating Cards */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg animate-glow-pulse-blue">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-neutral-200 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🚛</span>
@@ -122,7 +122,7 @@ export default function AboutUs() {
                 </div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
+              <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg animate-glow-pulse-green">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-neutral-300 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📈</span>
@@ -148,7 +148,7 @@ export default function AboutUs() {
               </p>
               <a 
                 href="/contact" 
-                className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-glow-pulse-white"
               >
                 Get Started Today
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

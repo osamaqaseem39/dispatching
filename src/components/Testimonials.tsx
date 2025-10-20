@@ -47,14 +47,19 @@ export default function Testimonials() {
         </ScrollAnimation>
         <div className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {visible.map((t, i) => (
-              <ScrollAnimation key={`${t.name}-${i}`} direction="up" delay={i * 100}>
-                <article className="rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors hover:bg-neutral-750 hover:border-neutral-700">
-                  <p className="text-neutral-200">"{t.quote}"</p>
-                  <div className="mt-4 text-sm text-neutral-400">{t.name} — {t.role}</div>
-                </article>
-              </ScrollAnimation>
-            ))}
+            {visible.map((t, i) => {
+              const glowColors = ['animate-glow-pulse-blue', 'animate-glow-pulse-green', 'animate-glow-pulse-orange'];
+              const glowClass = glowColors[i % glowColors.length];
+              
+              return (
+                <ScrollAnimation key={`${t.name}-${i}`} direction="up" delay={i * 100}>
+                  <article className={`rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors hover:bg-neutral-750 hover:border-neutral-700 ${glowClass}`}>
+                    <p className="text-neutral-200">"{t.quote}"</p>
+                    <div className="mt-4 text-sm text-neutral-400">{t.name} — {t.role}</div>
+                  </article>
+                </ScrollAnimation>
+              );
+            })}
           </div>
           <ScrollAnimation direction="up" delay={300}>
             <div className="mt-6 flex items-center justify-center gap-2">

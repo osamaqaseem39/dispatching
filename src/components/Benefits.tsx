@@ -72,17 +72,22 @@ export default function Benefits() {
           <p className="mt-3 text-neutral-300 max-w-3xl">Transparent pricing, nationwide coverage, and 24/7 experts focused on your profitability.</p>
         </ScrollAnimation>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {points.map((b, index) => (
-            <ScrollAnimation key={b.title} direction="up" delay={200 + (index * 100)}>
-              <div className="rounded-md border border-neutral-800 bg-neutral-900 p-6 hover:border-neutral-700 hover:bg-neutral-850 transition-all duration-300">
-                <div className="flex items-center gap-2 text-white">
-                  {b.icon}
-                  <h3 className="text-base font-semibold">{b.title}</h3>
+          {points.map((b, index) => {
+            const glowColors = ['animate-glow-pulse-blue', 'animate-glow-pulse-green', 'animate-glow-pulse-orange', 'animate-glow-pulse-purple', 'animate-glow-pulse-red', 'animate-glow-pulse-white'];
+            const glowClass = glowColors[index % glowColors.length];
+            
+            return (
+              <ScrollAnimation key={b.title} direction="up" delay={200 + (index * 100)}>
+                <div className={`rounded-md border border-neutral-800 bg-neutral-900 p-6 hover:border-neutral-700 hover:bg-neutral-850 transition-all duration-300 ${glowClass}`}>
+                  <div className="flex items-center gap-2 text-white">
+                    {b.icon}
+                    <h3 className="text-base font-semibold">{b.title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm text-neutral-300">{b.description}</p>
                 </div>
-                <p className="mt-3 text-sm text-neutral-300">{b.description}</p>
-              </div>
-            </ScrollAnimation>
-          ))}
+              </ScrollAnimation>
+            );
+          })}
         </div>
       </div>
     </section>
