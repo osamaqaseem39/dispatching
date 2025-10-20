@@ -83,7 +83,6 @@ export default function HowItWorks() {
                 </div>
               </ScrollAnimation>
             ))}
-          </div>
         </div>
 
         {/* CTA Section */}
