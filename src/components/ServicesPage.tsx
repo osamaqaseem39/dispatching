@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 type Service = {
   title: string;
@@ -59,6 +62,39 @@ const services: Service[] = [
 ];
 
 export default function ServicesPage() {
+  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = cardRefs.current.map((ref, index) => {
+      if (!ref) return null;
+      
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisibleCards(prev => {
+              if (!prev.includes(index)) {
+                return [...prev, index].sort((a, b) => a - b);
+              }
+              return prev;
+            });
+          }
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -100px 0px"
+        }
+      );
+      
+      observer.observe(ref);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach(observer => observer?.disconnect());
+    };
+  }, []);
+
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
@@ -69,59 +105,84 @@ export default function ServicesPage() {
           </p>
         </div>
         
-        <div className="space-y-8">
-          {services.map((item, index) => (
-            <div key={item.title} className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white hover:border-neutral-300 hover:shadow-xl transition-all duration-300">
-              <a href={`/services/${item.slug}`} className="block">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 lg:p-12">
-                  {/* Content Side */}
-                  <div className="flex flex-col justify-center space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex-shrink-0">
+        <div className="relative">
+          {services.map((item, index) => {
+            const isVisible = visibleCards.includes(index);
+            const stackIndex = visibleCards.indexOf(index);
+            const zIndex = services.length - stackIndex;
+            const translateY = stackIndex * 20;
+            const scale = 1 - (stackIndex * 0.02);
+            const opacity = Math.max(0.3, 1 - (stackIndex * 0.1));
+            
+            return (
+              <div
+                key={item.title}
+                ref={el => { cardRefs.current[index] = el; }}
+                className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white hover:border-neutral-300 hover:shadow-xl transition-all duration-500"
+                style={{
+                  transform: isVisible 
+                    ? `translateY(${translateY}px) scale(${scale})` 
+                    : 'translateY(100px) scale(0.95)',
+                  opacity: isVisible ? opacity : 0,
+                  zIndex: isVisible ? zIndex : 0,
+                  position: stackIndex > 0 ? 'absolute' : 'relative',
+                  top: stackIndex > 0 ? `${stackIndex * 20}px` : 'auto',
+                  left: stackIndex > 0 ? '0' : 'auto',
+                  right: stackIndex > 0 ? '0' : 'auto',
+                  width: stackIndex > 0 ? '100%' : 'auto',
+                }}
+              >
+                <a href={`/services/${item.slug}`} className="block">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                    {/* Content Side */}
+                    <div className="flex flex-col justify-center space-y-6">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0">
+                          <Image 
+                            src={item.imageSrc} 
+                            alt={item.title} 
+                            width={80} 
+                            height={80} 
+                            className="h-20 w-20 object-contain" 
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-semibold text-neutral-900 group-hover:text-black transition-colors">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </div>
+                      
+                      <p className="text-lg text-neutral-700 leading-relaxed">
+                        {item.body}
+                      </p>
+                      
+                      <div className="flex items-center text-black font-medium group-hover:text-neutral-700 transition-colors">
+                        <span>Learn more about this service</span>
+                        <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    {/* Image Side */}
+                    <div className="relative">
+                      <div className="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100">
                         <Image 
-                          src={item.imageSrc} 
-                          alt={item.title} 
-                          width={80} 
-                          height={80} 
-                          className="h-20 w-20 object-contain" 
+                          src={`/images/service${index + 1}.jpg`} 
+                          alt={item.title}
+                          width={600}
+                          height={450}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                      <div>
-                        <h3 className="text-2xl font-semibold text-neutral-900 group-hover:text-black transition-colors">
-                          {item.title}
-                        </h3>
-                      </div>
-                    </div>
-                    
-                    <p className="text-lg text-neutral-700 leading-relaxed">
-                      {item.body}
-                    </p>
-                    
-                    <div className="flex items-center text-black font-medium group-hover:text-neutral-700 transition-colors">
-                      <span>Learn more about this service</span>
-                      <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
                     </div>
                   </div>
-                  
-                  {/* Image Side */}
-                  <div className="relative">
-                    <div className="aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100">
-                      <Image 
-                        src={`/images/service${index + 1}.jpg`} 
-                        alt={item.title}
-                        width={600}
-                        height={450}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
+                </a>
+              </div>
+            );
+          })}
         </div>
         
         <div className="text-center mt-16">

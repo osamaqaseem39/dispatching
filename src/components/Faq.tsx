@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollAnimation from "./ScrollAnimation";
 
 const faqs = [
   {
@@ -26,23 +27,29 @@ export default function Faq() {
   return (
     <section className="bg-neutral-950">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">FAQs</h2>
+        <ScrollAnimation direction="up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">FAQs</h2>
+        </ScrollAnimation>
         <div className="mt-8 grid gap-4">
-          {faqs.map((f) => {
+          {faqs.map((f, index) => {
             const isOpen = open === f.q;
             return (
-              <div key={f.q} className="rounded-md border border-neutral-800 bg-neutral-900">
-                <button
-                  className="w-full flex items-center justify-between px-5 py-4 text-left text-white"
-                  onClick={() => setOpen(isOpen ? null : f.q)}
-                >
-                  <span className="font-medium">{f.q}</span>
-                  <svg viewBox="0 0 24 24" className={`h-5 w-5 transition-transform ${isOpen ? "rotate-180" : ""}`} fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                </button>
-                {isOpen && (
-                  <div className="px-5 pb-5 text-sm text-neutral-300">{f.a}</div>
-                )}
-              </div>
+              <ScrollAnimation key={f.q} direction="up" delay={index * 100}>
+                <div className="rounded-md border border-neutral-800 bg-neutral-900 hover:border-neutral-700 transition-colors">
+                  <button
+                    className="w-full flex items-center justify-between px-5 py-4 text-left text-white hover:text-neutral-100 transition-colors"
+                    onClick={() => setOpen(isOpen ? null : f.q)}
+                  >
+                    <span className="font-medium">{f.q}</span>
+                    <svg viewBox="0 0 24 24" className={`h-5 w-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} fill="none"><path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 pb-5 text-sm text-neutral-300 animate-fadeIn">
+                      {f.a}
+                    </div>
+                  )}
+                </div>
+              </ScrollAnimation>
             );
           })}
         </div>

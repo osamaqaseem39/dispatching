@@ -67,8 +67,8 @@ export default function Hero() {
         </div>
         
         <ScrollAnimation direction="right" delay={1000}>
-          <div className="relative">
-            <div className="h-96 md:h-[560px] w-full md:w-[380px] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 mx-auto md:mx-0 shadow-2xl">
+          <div className="relative flex justify-center">
+            <div className="h-96 md:h-[560px] w-full md:w-[380px] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 mx-auto shadow-2xl">
               <Image
                 src="/images/heroimage.jpg"
                 alt="Freight Logistic LLC - truck dispatching"

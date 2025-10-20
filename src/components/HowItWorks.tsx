@@ -53,17 +53,12 @@ export default function HowItWorks() {
           </div>
         </ScrollAnimation>
 
-        {/* Horizontal Timeline */}
-        <div className="relative">
-          {/* Connection Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-neutral-300 via-neutral-400 to-neutral-300 transform -translate-y-1/2 hidden lg:block"></div>
-          
-          {/* Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
+        {/* Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
             {steps.map((step, index) => (
               <ScrollAnimation key={step.title} direction="up" delay={index * 100}>
                 <div 
-                  className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-200"
+                  className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-200 h-80 flex flex-col"
                 >
                   {/* Step Number */}
                   <div className="absolute -top-4 left-6 w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
@@ -79,7 +74,7 @@ export default function HowItWorks() {
                   <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-black transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-neutral-600 leading-relaxed">
+                  <p className="text-neutral-600 leading-relaxed flex-1">
                     {step.body}
                   </p>
                   

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import ScrollAnimation from "./ScrollAnimation";
 
 type Testimonial = {
   name: string;
@@ -41,21 +42,27 @@ export default function Testimonials() {
   return (
     <section className="bg-neutral-900">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">What Carriers Say</h2>
+        <ScrollAnimation direction="up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">What Carriers Say</h2>
+        </ScrollAnimation>
         <div className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {visible.map((t, i) => (
-              <article key={`${t.name}-${i}`} className="rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors">
-                <p className="text-neutral-200">“{t.quote}”</p>
-                <div className="mt-4 text-sm text-neutral-400">{t.name} — {t.role}</div>
-              </article>
+              <ScrollAnimation key={`${t.name}-${i}`} direction="up" delay={i * 100}>
+                <article className="rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors hover:bg-neutral-750 hover:border-neutral-700">
+                  <p className="text-neutral-200">"{t.quote}"</p>
+                  <div className="mt-4 text-sm text-neutral-400">{t.name} — {t.role}</div>
+                </article>
+              </ScrollAnimation>
             ))}
           </div>
-          <div className="mt-6 flex items-center justify-center gap-2">
-            {testimonials.map((_, i) => (
-              <span key={i} className={`h-2.5 w-2.5 rounded-full ${i === index ? "bg-white" : "bg-neutral-700"}`} />)
-            )}
-          </div>
+          <ScrollAnimation direction="up" delay={300}>
+            <div className="mt-6 flex items-center justify-center gap-2">
+              {testimonials.map((_, i) => (
+                <span key={i} className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${i === index ? "bg-white" : "bg-neutral-700"}`} />
+              )}
+            </div>
+          </ScrollAnimation>
         </div>
       </div>
     </section>
