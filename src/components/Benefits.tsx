@@ -1,4 +1,5 @@
 import type { ReactElement } from "react";
+import ScrollAnimation from "./ScrollAnimation";
 
 type Benefit = { title: string; description: string; icon: ReactElement };
 
@@ -64,17 +65,23 @@ export default function Benefits() {
   return (
     <section id="benefits" className="bg-neutral-950">
       <div className="mx-auto max-w-7xl px-6 py-20">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Why Choose Freight Logistic LLC?</h2>
-        <p className="mt-3 text-neutral-300 max-w-3xl">Transparent pricing, nationwide coverage, and 24/7 experts focused on your profitability.</p>
+        <ScrollAnimation direction="up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Why Choose Freight Logistic LLC?</h2>
+        </ScrollAnimation>
+        <ScrollAnimation direction="up" delay={100}>
+          <p className="mt-3 text-neutral-300 max-w-3xl">Transparent pricing, nationwide coverage, and 24/7 experts focused on your profitability.</p>
+        </ScrollAnimation>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {points.map((b) => (
-            <div key={b.title} className="rounded-md border border-neutral-800 bg-neutral-900 p-6">
-              <div className="flex items-center gap-2 text-white">
-                {b.icon}
-                <h3 className="text-base font-semibold">{b.title}</h3>
+          {points.map((b, index) => (
+            <ScrollAnimation key={b.title} direction="up" delay={200 + (index * 100)}>
+              <div className="rounded-md border border-neutral-800 bg-neutral-900 p-6 hover:border-neutral-700 hover:bg-neutral-850 transition-all duration-300">
+                <div className="flex items-center gap-2 text-white">
+                  {b.icon}
+                  <h3 className="text-base font-semibold">{b.title}</h3>
+                </div>
+                <p className="mt-3 text-sm text-neutral-300">{b.description}</p>
               </div>
-              <p className="mt-3 text-sm text-neutral-300">{b.description}</p>
-            </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

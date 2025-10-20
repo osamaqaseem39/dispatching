@@ -60,7 +60,7 @@ export default function Testimonials() {
             <div className="mt-6 flex items-center justify-center gap-2">
               {testimonials.map((_, i) => (
                 <span key={i} className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${i === index ? "bg-white" : "bg-neutral-700"}`} />
-              )}
+              ))}
             </div>
           </ScrollAnimation>
         </div>

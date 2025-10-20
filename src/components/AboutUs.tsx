@@ -55,8 +55,8 @@ export default function AboutUs() {
                 <h3 className="text-xl font-semibold">Our Core Values</h3>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-black font-bold">✓</span>
+                    <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">✓</span>
                     </div>
                     <div>
                       <h4 className="font-semibold">Transparency</h4>
@@ -64,8 +64,8 @@ export default function AboutUs() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-neutral-300 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-black font-bold">✓</span>
+                    <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold">✓</span>
                     </div>
                     <div>
                       <h4 className="font-semibold">Reliability</h4>
@@ -73,7 +73,7 @@ export default function AboutUs() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-neutral-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white font-bold">✓</span>
                     </div>
                     <div>
