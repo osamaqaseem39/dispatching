@@ -63,7 +63,7 @@ export default function HowItWorks() {
               return (
                 <ScrollAnimation key={step.title} direction="up" delay={index * 100}>
                   <div 
-                    className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-200 h-80 flex flex-col ${glowClass}`}
+                    className={`group relative bg-white rounded-2xl px-6 pt-6 pb-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-neutral-200 h-80 flex flex-col ${glowClass}`}
                   >
                     {/* Step Number */}
                     <div className="absolute -top-4 left-6 w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
