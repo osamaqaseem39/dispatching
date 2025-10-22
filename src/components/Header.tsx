@@ -33,11 +33,11 @@ export default function Header() {
               aria-label="Primary"
               className="hidden md:flex items-center gap-6 text-sm text-neutral-200 rounded-full border border-neutral-800/80 bg-neutral-900/80 backdrop-blur px-5 py-2 shadow-lg shadow-black/30 transition-all"
             >
-              <a href="/" className="hover:text-white">Home</a>
-              <a href="/services" className="hover:text-white">Services</a>
-              <a href="/about" className="hover:text-white">About</a>
-              <a href="/compliance" className="hover:text-white">Compliance</a>
-              <a href="/contact" className="hover:text-white">Contact</a>
+              <Link href="/" className="hover:text-white">Home</Link>
+              <Link href="/services" className="hover:text-white">Services</Link>
+              <Link href="/about" className="hover:text-white">About</Link>
+              <Link href="/compliance" className="hover:text-white">Compliance</Link>
+              <Link href="/contact" className="hover:text-white">Contact</Link>
             </nav>
             
             {/* Mobile Menu Button */}
@@ -64,11 +64,11 @@ export default function Header() {
           <div className="fixed top-16 left-4 right-4 z-40 pointer-events-auto">
             <div className="bg-neutral-900/95 backdrop-blur rounded-2xl border border-neutral-800/80 shadow-lg shadow-black/30 p-6">
               <nav className="flex flex-col space-y-4">
-                <a href="/" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</a>
-                <a href="/services" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</a>
-                <a href="/about" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
-                <a href="/compliance" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Compliance</a>
-                <a href="/contact" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+                <Link href="/" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                <Link href="/services" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+                <Link href="/about" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link href="/compliance" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Compliance</Link>
+                <Link href="/contact" className="text-neutral-200 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
                 <div className="pt-2 border-t border-neutral-800">
                   <a href="/contact" className="inline-flex items-center justify-center w-full rounded-lg bg-white px-6 py-3 text-neutral-950 text-sm font-medium hover:bg-neutral-200 transition-colors">
                     Get Started
@@ -91,11 +91,11 @@ export default function Header() {
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-          <a href="/" className="hover:text-white">Home</a>
-          <a href="/services" className="hover:text-white">Services</a>
-          <a href="/about" className="hover:text-white">About</a>
-          <a href="/compliance" className="hover:text-white">Compliance</a>
-          <a href="/contact" className="hover:text-white">Contact</a>
+          <Link href="/" className="hover:text-white">Home</Link>
+          <Link href="/services" className="hover:text-white">Services</Link>
+          <Link href="/about" className="hover:text-white">About</Link>
+          <Link href="/compliance" className="hover:text-white">Compliance</Link>
+          <Link href="/contact" className="hover:text-white">Contact</Link>
         </nav>
         <div className="flex items-center gap-4">
           <a href="/contact" className="hidden sm:inline-flex items-center rounded-sm bg-white px-4 py-2 text-neutral-950 text-sm hover:bg-neutral-200">Get Started</a>
@@ -122,11 +122,11 @@ export default function Header() {
         <div className="md:hidden border-t border-neutral-800 bg-neutral-950/95 backdrop-blur">
           <div className="mx-auto max-w-7xl px-6 py-4">
             <nav className="flex flex-col space-y-3">
-              <a href="/" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</a>
-              <a href="/services" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</a>
-              <a href="/about" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</a>
-              <a href="/compliance" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Compliance</a>
-              <a href="/contact" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+              <Link href="/" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+              <Link href="/services" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link href="/about" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</Link>
+              <Link href="/compliance" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Compliance</Link>
+              <Link href="/contact" className="text-neutral-300 hover:text-white py-2 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
               <div className="pt-3 border-t border-neutral-800">
                 <a href="/contact" className="inline-flex items-center justify-center w-full rounded-lg bg-white px-6 py-3 text-neutral-950 text-sm font-medium hover:bg-neutral-200 transition-colors">
                   Get Started

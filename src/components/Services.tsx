@@ -82,8 +82,6 @@ export default function Services() {
         </ScrollAnimation>
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4 relative">
           {services.map((item, index) => {
-            const glowClass = '';
-            
             return (
               <ScrollAnimation key={item.title} direction="up" delay={index * 100}>
                 <div className={`group rounded-md border border-neutral-200 bg-white hover:border-neutral-300 transition-colors [perspective:1000px]`}>
