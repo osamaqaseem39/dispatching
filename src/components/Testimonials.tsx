@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import ScrollAnimation from "./ScrollAnimation";
+import Glows from "./Glows";
 
 type Testimonial = {
   name: string;
@@ -40,7 +41,8 @@ export default function Testimonials() {
   }, [index]);
 
   return (
-    <section className="bg-neutral-900">
+    <section className="bg-neutral-900 relative overflow-hidden">
+      <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-16">
         <ScrollAnimation direction="up">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">What Carriers Say</h2>
@@ -48,13 +50,12 @@ export default function Testimonials() {
         <div className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {visible.map((t, i) => {
-              const glowColors = ['animate-glow-pulse-blue', 'animate-glow-pulse-green', 'animate-glow-pulse-orange'];
-              const glowClass = glowColors[i % glowColors.length];
-              
+              const glowClass = '';
+
               return (
-                <ScrollAnimation key={`${t.name}-${i}`} direction="up" delay={i * 100}>
-                  <article className={`rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors hover:bg-neutral-750 hover:border-neutral-700 ${glowClass}`}>
-                    <p className="text-neutral-200">"{t.quote}"</p>
+                <ScrollAnimation key={`${t.name}-${i}`} direction="up" delay={i * 100} className="h-full">
+                  <article className={`h-full rounded-md border border-neutral-800 bg-neutral-800 p-6 text-white transition-colors hover:bg-neutral-750 hover:border-neutral-700 flex flex-col ${glowClass}`}>
+                    <p className="text-neutral-200 flex-1">"{t.quote}"</p>
                     <div className="mt-4 text-sm text-neutral-400">{t.name} — {t.role}</div>
                   </article>
                 </ScrollAnimation>

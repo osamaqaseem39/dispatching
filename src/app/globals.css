@@ -15,6 +15,86 @@ body {
   color: var(--foreground);
 }
 
+/* Section background pulsing circles (gray/white/black) */
+@keyframes pulseCircle {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.18;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.18;
+  }
+}
+
+.animate-pulse-circle {
+  animation: pulseCircle 6s ease-in-out infinite;
+}
+
+.circle-base {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.circle-gray {
+  background: #9ca3af; /* neutral-400 */
+}
+
+.circle-white {
+  background: #ffffff;
+}
+
+.circle-black {
+  background: #000000;
+}
+
+/* Soft blurred glow circles */
+@keyframes floatGlow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.glow-circle {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.glow-white {
+  background: radial-gradient(closest-side, rgba(255,255,255,0.6), rgba(255,255,255,0));
+}
+
+.glow-blue {
+  background: radial-gradient(closest-side, rgba(59,130,246,0.6), rgba(59,130,246,0));
+}
+
+.glow-rose {
+  background: radial-gradient(closest-side, rgba(244,63,94,0.35), rgba(244,63,94,0));
+}
+
+.glow-amber {
+  background: radial-gradient(closest-side, rgba(245,158,11,0.35), rgba(245,158,11,0));
+}
+
+.animate-float-glow {
+  animation: floatGlow 10s ease-in-out infinite;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollAnimation from "./ScrollAnimation";
+import Glows from "./Glows";
 
 type Service = {
   title: string;
@@ -73,19 +74,19 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white">
+    <section id="services" className="bg-neutral-100 relative overflow-hidden">
+      <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-16">
         <ScrollAnimation direction="up">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Our Professional Dispatch Services</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900">Our Professional Dispatch Services</h2>
         </ScrollAnimation>
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4 relative">
           {services.map((item, index) => {
-            const glowColors = ['animate-glow-pulse-blue', 'animate-glow-pulse-green', 'animate-glow-pulse-orange', 'animate-glow-pulse-purple', 'animate-glow-pulse-red', 'animate-glow-pulse', 'animate-glow-pulse-blue', 'animate-glow-pulse-green'];
-            const glowClass = glowColors[index % glowColors.length];
+            const glowClass = '';
             
             return (
               <ScrollAnimation key={item.title} direction="up" delay={index * 100}>
-                <div className={`group rounded-md border border-neutral-200 bg-white hover:border-neutral-300 [perspective:1000px] ${glowClass}`}>
+                <div className={`group rounded-md border border-neutral-200 bg-white hover:border-neutral-300 transition-colors [perspective:1000px]`}>
                   <a href={`/services/${item.slug}`} className="relative block h-full min-h-[260px] [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
                     {/* Front */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-6 [backface-visibility:hidden]">

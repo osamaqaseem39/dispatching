@@ -24,9 +24,12 @@ function LocationIcon() {
   );
 }
 
+import Glows from "./Glows";
+
 export default function Contact() {
   return (
-    <section id="contact" className="bg-white">
+    <section id="contact" className="bg-neutral-100 text-neutral-900 relative overflow-hidden">
+      <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-10 md:grid-cols-2">
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Contact Freight Logistic LLC</h2>
@@ -40,7 +43,7 @@ export default function Contact() {
             We respond quickly — dispatchers available 24/7.
           </p>
         </div>
-        <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4 animate-glow-pulse-blue">
+        <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4">
           <div>
             <label className="block text-sm font-medium text-neutral-800">Name</label>
             <input type="text" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Your name" />
@@ -57,7 +60,7 @@ export default function Contact() {
             <label className="block text-sm font-medium text-neutral-800">Message</label>
             <textarea className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" rows={4} placeholder="Tell us about your lanes, equipment, and goals" />
           </div>
-          <button type="button" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800 animate-glow-pulse-white">Send Request</button>
+          <button type="button" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Send Request</button>
         </form>
       </div>
     </section>

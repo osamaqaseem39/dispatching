@@ -1,9 +1,11 @@
 import Image from "next/image";
 import ScrollAnimation from "./ScrollAnimation";
+import Glows from "./Glows";
 
 export default function AboutUs() {
   return (
-    <section className="bg-gradient-to-br from-neutral-50 to-neutral-100">
+    <section className="bg-black text-white relative overflow-hidden">
+      <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* Content */}
@@ -13,12 +15,12 @@ export default function AboutUs() {
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
                   About Freight Logistic LLC
                 </h2>
-                <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                <p className="text-lg text-neutral-300 leading-relaxed mb-6">
                   We&apos;re a dedicated team of transportation professionals with over 15 years of experience 
                   in truck dispatching, logistics coordination, and freight management. Our mission is to 
                   help owner-operators and small fleets maximize their revenue while minimizing administrative burden.
                 </p>
-                <p className="text-lg text-neutral-700 leading-relaxed">
+                <p className="text-lg text-neutral-300 leading-relaxed">
                   Founded by industry veterans who understand the challenges of independent trucking, 
                   we&apos;ve built our services around the core principle of transparency, reliability, and 
                   mutual success. Every load we book, every rate we negotiate, and every service we provide 
@@ -30,21 +32,21 @@ export default function AboutUs() {
             {/* Stats */}
             <ScrollAnimation direction="up" delay={200}>
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-blue">
-                  <div className="text-3xl font-bold text-black mb-2">500+</div>
-                  <div className="text-sm text-neutral-600">Active Carriers</div>
+                <div className="bg-neutral-900 rounded-xl p-6 shadow-lg text-center">
+                  <div className="text-3xl font-bold text-white mb-2">500+</div>
+                  <div className="text-sm text-neutral-300">Active Carriers</div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-green">
-                  <div className="text-3xl font-bold text-neutral-800 mb-2">15+</div>
-                  <div className="text-sm text-neutral-600">Years Experience</div>
+                <div className="bg-neutral-900 rounded-xl p-6 shadow-lg text-center">
+                  <div className="text-3xl font-bold text-white mb-2">15+</div>
+                  <div className="text-sm text-neutral-300">Years Experience</div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-orange">
-                  <div className="text-3xl font-bold text-neutral-700 mb-2">$2.5M+</div>
-                  <div className="text-sm text-neutral-600">Monthly Revenue</div>
+                <div className="bg-neutral-900 rounded-xl p-6 shadow-lg text-center">
+                  <div className="text-3xl font-bold text-white mb-2">$2.5M+</div>
+                  <div className="text-sm text-neutral-300">Monthly Revenue</div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-glow-pulse-purple">
-                  <div className="text-3xl font-bold text-neutral-900 mb-2">98%</div>
-                  <div className="text-sm text-neutral-600">On-Time Delivery</div>
+                <div className="bg-neutral-900 rounded-xl p-6 shadow-lg text-center">
+                  <div className="text-3xl font-bold text-white mb-2">98%</div>
+                  <div className="text-sm text-neutral-300">On-Time Delivery</div>
                 </div>
               </div>
             </ScrollAnimation>
@@ -60,7 +62,7 @@ export default function AboutUs() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Transparency</h4>
-                      <p className="text-sm text-neutral-600">Clear communication and honest reporting on every load.</p>
+                      <p className="text-sm text-neutral-300">Clear communication and honest reporting on every load.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -69,7 +71,7 @@ export default function AboutUs() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Reliability</h4>
-                      <p className="text-sm text-neutral-600">Consistent service and dependable support when you need it.</p>
+                      <p className="text-sm text-neutral-300">Consistent service and dependable support when you need it.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -78,7 +80,7 @@ export default function AboutUs() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Partnership</h4>
-                      <p className="text-sm text-neutral-600">We succeed when you succeed - mutual success.</p>
+                      <p className="text-sm text-neutral-300">We succeed when you succeed - mutual success.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -87,7 +89,7 @@ export default function AboutUs() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Innovation</h4>
-                      <p className="text-sm text-neutral-600">Leveraging technology to improve your operations.</p>
+                      <p className="text-sm text-neutral-300">Leveraging technology to improve your operations.</p>
                     </div>
                   </div>
                 </div>
@@ -100,7 +102,7 @@ export default function AboutUs() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="/images/heroimage.jpg" 
+                  src="/images/aboutusimage.jpg" 
                   alt="Freight Logistic LLC Team" 
                   width={600} 
                   height={400} 
@@ -110,26 +112,26 @@ export default function AboutUs() {
               </div>
               
               {/* Floating Cards */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg animate-glow-pulse-blue">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-neutral-200 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🚛</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-sm">Professional Team</div>
-                    <div className="text-xs text-neutral-600">Dedicated dispatchers</div>
+                    <div className="font-semibold text-sm text-neutral-900">Professional Team</div>
+                    <div className="text-xs text-neutral-700">Dedicated dispatchers</div>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg animate-glow-pulse-green">
+              <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-neutral-300 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📈</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-sm">Proven Results</div>
-                    <div className="text-xs text-neutral-600">Higher revenue</div>
+                    <div className="font-semibold text-sm text-neutral-900">Proven Results</div>
+                    <div className="text-xs text-neutral-700">Higher revenue</div>
                   </div>
                 </div>
               </div>
@@ -139,16 +141,16 @@ export default function AboutUs() {
 
         {/* CTA */}
         <ScrollAnimation direction="up" delay={800}>
-          <div className="text-center mt-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-200">
-              <h3 className="text-2xl font-semibold mb-4">Ready to Work With Us?</h3>
-              <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
+            <div className="text-center mt-16">
+            <div className="bg-neutral-900 rounded-2xl p-8 shadow-lg border border-neutral-800">
+              <h3 className="text-2xl font-semibold mb-4 text-white">Ready to Work With Us?</h3>
+              <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
                 Join our growing family of successful owner-operators and small fleets. 
                 Let&apos;s discuss how we can help grow your business.
               </p>
               <a 
                 href="/contact" 
-                className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-glow-pulse-white"
+                  className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-black text-lg font-medium hover:bg-neutral-200 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Get Started Today
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

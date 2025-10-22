@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Image src="/images/logo.jpg" alt="Freight Logistic LLC" width={56} height={56} className="rounded-sm object-cover" />
+              <Image src="/images/logo.png" alt="Freight Logistic LLC" width={72} height={72} className="rounded-sm object-cover" />
               <span className="text-lg font-semibold">Freight Logistic LLC</span>
             </div>
             <p className="text-sm text-neutral-300 max-w-xs">
@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
             <div className="text-sm text-neutral-400">
               <p>📧 info@freightslogistic.com</p>
-              <p>📞 (555) 123-4567</p>
+              <p>📞 +1 (949) 828-1756</p>
               <p>📍 Serving All 50 States</p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/contact" className="text-neutral-300 hover:text-white transition-colors">Contact Us</Link></li>
               <li><Link href="/faq" className="text-neutral-300 hover:text-white transition-colors">FAQ</Link></li>
-              <li><a href="tel:+15551234567" className="text-neutral-300 hover:text-white transition-colors">Emergency Support</a></li>
+              <li><a href="tel:+19498281756" className="text-neutral-300 hover:text-white transition-colors">Emergency Support</a></li>
               <li><a href="mailto:support@freightslogistic.com" className="text-neutral-300 hover:text-white transition-colors">Email Support</a></li>
             </ul>
           </div>

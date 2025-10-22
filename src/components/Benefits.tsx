@@ -1,5 +1,6 @@
 import type { ReactElement } from "react";
 import ScrollAnimation from "./ScrollAnimation";
+import Glows from "./Glows";
 
 type Benefit = { title: string; description: string; icon: ReactElement };
 
@@ -63,7 +64,8 @@ const points: Benefit[] = [
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="bg-neutral-950">
+    <section id="benefits" className="bg-neutral-900 relative overflow-hidden">
+      <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-20">
         <ScrollAnimation direction="up">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Why Choose Freight Logistic LLC?</h2>
@@ -73,15 +75,14 @@ export default function Benefits() {
         </ScrollAnimation>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {points.map((b, index) => {
-            const glowColors = ['animate-glow-pulse-blue', 'animate-glow-pulse-green', 'animate-glow-pulse-orange', 'animate-glow-pulse-purple', 'animate-glow-pulse-red', 'animate-glow-pulse-white'];
-            const glowClass = glowColors[index % glowColors.length];
-            
+            const glowClass = '';
+
             return (
               <ScrollAnimation key={b.title} direction="up" delay={200 + (index * 100)}>
-                <div className={`rounded-md border border-neutral-800 bg-neutral-900 p-6 hover:border-neutral-700 hover:bg-neutral-850 transition-all duration-300 ${glowClass}`}>
+                <div className={`rounded-md border border-neutral-700 bg-neutral-800 p-6 hover:border-neutral-600 transition-all duration-300 ${glowClass}`}>
                   <div className="flex items-center gap-2 text-white">
                     {b.icon}
-                    <h3 className="text-base font-semibold">{b.title}</h3>
+                    <h3 className="text-base font-semibold ">{b.title}</h3>
                   </div>
                   <p className="mt-3 text-sm text-neutral-300">{b.description}</p>
                 </div>

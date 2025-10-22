@@ -1,4 +1,5 @@
 import ScrollAnimation from "./ScrollAnimation";
+import Glows from "./Glows";
 
 export default function HowItWorks() {
   const steps = [
@@ -41,7 +42,8 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-neutral-50 to-neutral-100">
+    <section className="bg-neutral-100 text-neutral-900 relative overflow-hidden">
+      <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-20">
         <ScrollAnimation direction="up">
           <div className="text-center mb-16">
@@ -56,9 +58,8 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
             {steps.map((step, index) => {
-              const glowColors = ['animate-glow-pulse-blue', 'animate-glow-pulse-green', 'animate-glow-pulse-purple', 'animate-glow-pulse-orange', 'animate-glow-pulse-red', 'animate-glow-pulse'];
-              const glowClass = glowColors[index % glowColors.length];
-              
+              const glowClass = '';
+
               return (
                 <ScrollAnimation key={step.title} direction="up" delay={index * 100}>
                   <div 
@@ -75,7 +76,7 @@ export default function HowItWorks() {
                     </div>
                     
                     {/* Content */}
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-black transition-colors">
+                    <h3 className="text-xl font-semibold text-neutral-900 mb-3 transition-colors">
                       {step.title}
                     </h3>
                     <p className="text-neutral-600 leading-relaxed flex-1">
@@ -102,7 +103,7 @@ export default function HowItWorks() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-glow-pulse-white"
+                  className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Start Your Free Consultation
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +112,7 @@ export default function HowItWorks() {
                 </a>
                 <a
                   href="/services"
-                  className="inline-flex items-center rounded-lg border-2 border-black px-8 py-4 text-black text-lg font-medium hover:bg-black hover:text-white transition-colors animate-glow-pulse"
+                  className="inline-flex items-center rounded-lg border-2 border-black px-8 py-4 text-black text-lg font-medium hover:bg-black hover:text-white transition-colors"
                 >
                   View All Services
                 </a>

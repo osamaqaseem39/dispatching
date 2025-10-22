@@ -10,8 +10,8 @@ export default function Cta() {
         </div>
         <div className="flex md:justify-end">
           <div className="flex flex-wrap gap-3">
-            <a href="tel:+19498281756" className="inline-flex items-center rounded-sm bg-white px-4 py-2 text-neutral-950 text-sm font-medium hover:bg-neutral-200 animate-glow-pulse-white">Call +1 (949) 828-1756</a>
-            <a href="/contact" className="inline-flex items-center rounded-sm border border-neutral-600 px-4 py-2 text-white text-sm hover:bg-neutral-800 animate-glow-pulse-green">Email freightlogistic01@gmail.com</a>
+            <a href="tel:+19498281756" className="inline-flex items-center rounded-sm bg-white px-4 py-2 text-neutral-950 text-sm font-medium hover:bg-neutral-200">Call +1 (949) 828-1756</a>
+            <a href="/contact" className="inline-flex items-center rounded-sm border border-neutral-600 px-4 py-2 text-white text-sm hover:bg-neutral-800">Email freightlogistic01@gmail.com</a>
           </div>
         </div>
       </div>
