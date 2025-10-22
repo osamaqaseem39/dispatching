@@ -32,6 +32,7 @@ export default function Header() {
               aria-label="Primary"
               className="hidden md:flex items-center gap-6 text-sm text-neutral-200 rounded-full border border-neutral-800/80 bg-neutral-900/80 backdrop-blur px-5 py-2 shadow-lg shadow-black/30 transition-all"
             >
+              <a href="/" className="hover:text-white">Home</a>
               <a href="/services" className="hover:text-white">Services</a>
               <a href="/about" className="hover:text-white">About</a>
               <a href="/compliance" className="hover:text-white">Compliance</a>
@@ -52,6 +53,7 @@ export default function Header() {
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+          <a href="/" className="hover:text-white">Home</a>
           <a href="/services" className="hover:text-white">Services</a>
           <a href="/about" className="hover:text-white">About</a>
           <a href="/compliance" className="hover:text-white">Compliance</a>
