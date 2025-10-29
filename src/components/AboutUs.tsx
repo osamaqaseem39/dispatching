@@ -41,8 +41,8 @@ export default function AboutUs() {
                   <div className="text-sm text-neutral-300">Years Experience</div>
                 </div>
                 <div className="bg-neutral-900 rounded-xl p-6 shadow-lg text-center">
-                  <div className="text-3xl font-bold text-white mb-2">$2.5M+</div>
-                  <div className="text-sm text-neutral-300">Monthly Revenue</div>
+                  <div className="text-3xl font-bold text-white mb-2">10K+</div>
+                  <div className="text-sm text-neutral-300">Loads Booked</div>
                 </div>
                 <div className="bg-neutral-900 rounded-xl p-6 shadow-lg text-center">
                   <div className="text-3xl font-bold text-white mb-2">98%</div>
