@@ -67,8 +67,6 @@ export default function Footer() {
             <div className="flex items-center gap-6 text-sm">
               <Link href="/privacy" className="text-neutral-400 hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="text-neutral-400 hover:text-white transition-colors">Terms of Service</Link>
-              <span className="text-neutral-500">|</span>
-              <span className="text-neutral-500">MC# 123456</span>
             </div>
           </div>
         </div>
