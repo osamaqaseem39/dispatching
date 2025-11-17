@@ -99,10 +99,20 @@ export default function ServicesPage() {
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Our Professional Dispatch Services</h2>
-          <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-            Comprehensive truck dispatching solutions designed to maximize your revenue and minimize your administrative burden.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">What We Offer</h2>
+          <div className="text-lg text-neutral-600 max-w-3xl mx-auto space-y-2 mt-6 text-left">
+            <p><strong>Truck Dispatching:</strong> We find the best-paying loads and manage all communications for you.</p>
+            <p><strong>Paperwork & Compliance:</strong> From rate confirmations to invoices — we handle all documentation.</p>
+            <p><strong>Route Optimization:</strong> Save time and fuel with smart route planning.</p>
+            <p><strong>24/7 Support:</strong> Round-the-clock dispatch team to guide and assist you on every mile.</p>
+          </div>
+          <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 mt-12">We Work With</h3>
+          <ul className="text-lg text-neutral-600 max-w-3xl mx-auto space-y-1">
+            <li>• Dry Vans</li>
+            <li>• Reefers</li>
+            <li>• Flatbeds</li>
+            <li>• Power Only Units</li>
+          </ul>
         </div>
         
         <div className="relative">
@@ -187,7 +197,7 @@ export default function ServicesPage() {
         
         <div className="text-center mt-16">
           <a href="/contact" className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors">
-            Get Started Today
+            Ready to roll? Contact Freights Logistic today to start dispatching smarter.
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

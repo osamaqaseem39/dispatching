@@ -68,10 +68,10 @@ export default function Benefits() {
       <Glows count={3} colors={["blue"]} />
       <div className="mx-auto max-w-7xl px-6 py-20">
         <ScrollAnimation direction="up">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Why Choose Freight Logistic LLC?</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">Why Choose Freights Logistic?</h2>
         </ScrollAnimation>
         <ScrollAnimation direction="up" delay={100}>
-          <p className="mt-3 text-neutral-300 max-w-3xl">Transparent pricing, nationwide coverage, and 24/7 experts focused on your profitability.</p>
+          <p className="mt-3 text-neutral-300 max-w-3xl">24/7 Dispatch Support • Competitive Load Rates • Fast & Transparent Communication • Nationwide Coverage • Real-time Load Tracking</p>
         </ScrollAnimation>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {points.map((b, index) => {

@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Truck Dispatch Services USA – Freight Logistic LLC",
+  title: "Reliable Truck Dispatching & Road Freight Services Across the USA | Freights Logistic",
   description:
-    "Professional truck dispatching for owner-operators, small fleets, and independent truckers across the USA. Load booking, rate negotiation, paperwork, compliance, and 24/7 support.",
+    "Freights Logistic provides trusted truck dispatching and road freight transportation across the United States. Safe, on-time, and affordable logistics — powered by experts.",
   icons: {
     icon: "/images/logo.png",
     shortcut: "/images/logo.png",

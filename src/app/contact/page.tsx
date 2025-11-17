@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact – Freight Logistic LLC",
-  description: "Get in touch for reliable truck dispatch services across the USA.",
+  title: "Contact Freights Logistic | 24/7 Truck Dispatching Support",
+  description: "Get in touch with Freights Logistic for truck dispatching, load booking, or support. Our U.S.-based team is available 24/7 to help drivers and fleets nationwide.",
 };
 
 import Glows from "@/components/Glows";
@@ -11,19 +11,19 @@ export default function ContactPage() {
       <section className="bg-neutral-950 text-white relative overflow-hidden">
         <Glows count={3} colors={["blue"]} />
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Get in Touch with Freight Logistic LLC</h1>
-          <p className="mt-3 text-neutral-300 max-w-3xl">Ready to grow your trucking business with professional dispatch support? Contact our team today for a free consultation or to start dispatching immediately.</p>
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Let's Get You Moving!</h1>
+          <p className="mt-3 text-neutral-300 max-w-3xl">Our team is here to help you with load bookings, dispatch support, and all your freight needs.</p>
         </div>
       </section>
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16 grid gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-xl font-semibold">Reach Us</h2>
+            <h2 className="text-xl font-semibold">Get in Touch</h2>
+            <p className="mt-2 text-sm text-neutral-700 mb-4">Fill out the form below and our dispatching experts will reach out within 24 hours.</p>
             <ul className="mt-4 text-sm text-neutral-700 space-y-2">
-              <li><span className="font-medium">Email:</span> freightlogistic01@gmail.com</li>
-              <li><span className="font-medium">Phone:</span> +1 (949) 828 1756</li>
-              <li><span className="font-medium">Location:</span> United States</li>
-              <li><span className="font-medium">Website:</span> www.freightslogistic.com</li>
+              <li>📍 <span className="font-medium">Office Address:</span> Miami, Florida</li>
+              <li>📞 <span className="font-medium">Phone:</span> (949) 828 1756</li>
+              <li>📧 <span className="font-medium">Email:</span> freightlogistic01@gmail.com</li>
             </ul>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="tel:+19498281756" className="inline-flex items-center rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Call Now</a>
@@ -53,6 +53,11 @@ export default function ContactPage() {
             </div>
             <button type="button" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Send Request</button>
           </form>
+        </div>
+        <div className="text-center mt-12">
+          <p className="text-lg text-neutral-700 font-medium">
+            Start your dispatching journey with Freights Logistic today!
+          </p>
         </div>
       </section>
     </main>

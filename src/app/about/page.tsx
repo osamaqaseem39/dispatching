@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "About – Freight Logistic LLC",
-  description: "Trusted partner for professional truck dispatching across the USA.",
+  title: "About Freights Logistic | Trusted Truck Dispatching Experts in the USA",
+  description: "Learn more about Freights Logistic — a U.S.-based road freight dispatching company helping truck drivers and fleets maximize revenue with smart logistics solutions.",
 };
 
 import Glows from "@/components/Glows";
@@ -11,9 +11,9 @@ export default function AboutPage() {
       <section className="bg-neutral-950 text-white relative overflow-hidden">
         <Glows count={3} colors={["blue"]} />
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">About Freight Logistic LLC</h1>
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Who We Are</h1>
           <p className="mt-3 text-neutral-300 max-w-3xl">
-            We are a U.S.-based truck dispatch company dedicated to empowering carriers, owner-operators, and small fleets with transparent communication and dependable support.
+            At Freights Logistic, trucking is more than a business — it's our passion. We're a team of experienced dispatchers and logistics experts dedicated to simplifying the trucking journey for owner-operators and small fleets.
           </p>
         </div>
       </section>
@@ -21,12 +21,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12">
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h2 className="text-xl font-semibold">Mission</h2>
-              <p className="mt-2 text-sm text-neutral-700">Help trucking professionals operate efficiently and profitably through reliable dispatching, transparent communication, and strong industry partnerships.</p>
+              <h2 className="text-xl font-semibold">Our Mission</h2>
+              <p className="mt-2 text-sm text-neutral-700">To empower drivers and businesses with efficient dispatching, fair load deals, and stress-free operations across the U.S.</p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold">Vision</h2>
-              <p className="mt-2 text-sm text-neutral-700">Become the most trusted and carrier-focused truck dispatch company in the United States, setting new standards in reliability and service excellence.</p>
+              <h3 className="text-xl font-semibold">Our Vision</h3>
+              <p className="mt-2 text-sm text-neutral-700">To become America's most trusted name in road freight logistics, by blending technology, transparency, and teamwork.</p>
             </div>
           </div>
           <div>
@@ -38,6 +38,11 @@ export default function AboutPage() {
               <li><span className="font-medium">Partnership:</span> We grow when our carriers grow.</li>
               <li><span className="font-medium">Innovation:</span> Modern tools for smarter routing and operations.</li>
             </ul>
+          </div>
+          <div className="text-center mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors">
+              Partner with Freights Logistic — let's move America together.
+            </a>
           </div>
         </div>
       </section>

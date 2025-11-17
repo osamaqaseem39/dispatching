@@ -13,19 +13,19 @@ export default function Hero() {
         <div className="space-y-8">
           <ScrollAnimation direction="up" delay={0}>
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
-              Your Trusted Truck Dispatch Partner Across the USA
+              Reliable Road Freight & Dispatching Services in the USA
             </h1>
           </ScrollAnimation>
           
           <ScrollAnimation direction="up" delay={200}>
             <p className="text-neutral-300 text-lg md:text-xl">
-              Stay loaded. Stay profitable. Stay stress-free.
+              At Freights Logistic, we keep America moving. Our expert dispatchers connect drivers and loads nationwide — ensuring every delivery is on time, efficient, and profitable.
             </p>
           </ScrollAnimation>
           
           <ScrollAnimation direction="up" delay={400}>
             <p className="text-neutral-300 text-base md:text-lg max-w-2xl">
-              From load booking to paperwork, rate negotiation to route optimization — we keep your trucks moving and your business growing.
+              Whether you manage a small fleet or drive solo, our dispatching team helps you maximize miles, minimize downtime, and get paid faster.
             </p>
           </ScrollAnimation>
           

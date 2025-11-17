@@ -3,9 +3,12 @@ export default function Cta() {
     <section className="bg-neutral-900 text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-8 md:grid-cols-2 items-center">
         <div>
-          <h3 className="text-xl md:text-2xl font-semibold">Let us keep your trucks loaded and your profits high.</h3>
+          <h3 className="text-xl md:text-2xl font-semibold">Simplify Your Trucking Business</h3>
           <p className="mt-2 text-neutral-300 text-sm">
-            Professional dispatch for owner-operators and small fleets — load booking, paperwork, negotiation, and 24/7 support.
+            We handle the paperwork, negotiations, and scheduling — so you can focus on driving.
+          </p>
+          <p className="mt-4 text-neutral-200 font-medium">
+            Get started today — partner with Freights Logistic and drive smarter!
           </p>
         </div>
         <div className="flex md:justify-end">
