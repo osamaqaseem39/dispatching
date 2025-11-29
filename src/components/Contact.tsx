@@ -37,30 +37,31 @@ export default function Contact() {
             <li className="flex items-center gap-2"><MailIcon /><span className="font-medium">Email:</span> freightlogistic01@gmail.com</li>
             <li className="flex items-center gap-2"><PhoneIcon /><span className="font-medium">Phone:</span> +1 (949) 828 1756</li>
             <li className="flex items-center gap-2"><LocationIcon /><span className="font-medium">Location:</span> United States</li>
-            <li className="flex items-center gap-2"><svg viewBox="0 0 24 24" className="h-4 w-4" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" strokeWidth="1.5" /><path d="M7 8h10v8H7z" stroke="currentColor" strokeWidth="1.5" /></svg><span className="font-medium">Website:</span> www.freightslogistic.com</li>
+            <li className="flex items-center gap-2"><svg viewBox="0 0 24 24" className="h-4 w-4" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" strokeWidth="1.5" /><path d="M7 8h10v8H7z" stroke="currentColor" strokeWidth="1.5" /></svg><span className="font-medium">Website:</span> www.freightlogistic.com</li>
           </ul>
           <p className="mt-6 text-sm text-neutral-600">
             We respond quickly — dispatchers available 24/7.
           </p>
         </div>
-        <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4">
+        <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4" action="mailto:info@freightslogistic.com" method="post" encType="text/plain">
+          <input type="hidden" name="to" value="info@freightslogistic.com" />
           <div>
             <label className="block text-sm font-medium text-neutral-800">Name</label>
-            <input type="text" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Your name" />
+            <input type="text" name="name" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Your name" />
           </div>
           <div>
             <label className="block text-sm font-medium text-neutral-800">Email</label>
-            <input type="email" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="you@example.com" />
+            <input type="email" name="email" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="you@example.com" />
           </div>
           <div>
             <label className="block text-sm font-medium text-neutral-800">Phone</label>
-            <input type="tel" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="(###) ### ####" />
+            <input type="tel" name="phone" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="(###) ### ####" />
           </div>
           <div>
             <label className="block text-sm font-medium text-neutral-800">Message</label>
-            <textarea className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" rows={4} placeholder="Tell us about your lanes, equipment, and goals" />
+            <textarea name="message" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" rows={4} placeholder="Tell us about your lanes, equipment, and goals" />
           </div>
-          <button type="button" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Send Request</button>
+          <button type="submit" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Send Request</button>
         </form>
       </div>
     </section>

@@ -16,9 +16,9 @@ export default function Footer() {
               Professional truck dispatching services for owner-operators and small fleets across the USA.
             </p>
             <div className="text-sm text-neutral-400">
-              <p>📧 info@freightslogistic.com</p>
+              <p>📧 freightlogistic01@gmail.com</p>
               <p>📞 +1 (949) 828-1756</p>
-              <p>📍 Serving All 50 States</p>
+              <p>📍 Serving All 48 States</p>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
               <li><Link href="/contact" className="text-neutral-300 hover:text-white transition-colors">Contact Us</Link></li>
               <li><Link href="/faq" className="text-neutral-300 hover:text-white transition-colors">FAQ</Link></li>
               <li><a href="tel:+19498281756" className="text-neutral-300 hover:text-white transition-colors">Emergency Support</a></li>
-              <li><a href="mailto:support@freightslogistic.com" className="text-neutral-300 hover:text-white transition-colors">Email Support</a></li>
+              <li><a href="mailto:freightlogistic01@gmail.com" className="text-neutral-300 hover:text-white transition-colors">Email Support</a></li>
             </ul>
           </div>
         </div>

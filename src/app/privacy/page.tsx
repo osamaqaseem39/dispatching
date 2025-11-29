@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy | Freights Logistic",
-  description: "Freights Logistic respects your privacy. Read our policy on how we collect, use, and protect personal information of clients and visitors.",
+  title: "Privacy Policy | Freight Logistic",
+  description: "Freight Logistic respects your privacy. Read our policy on how we collect, use, and protect personal information of clients and visitors.",
 };
 
 import Glows from "@/components/Glows";
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <div className="prose prose-neutral max-w-none">
             <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-              At Freights Logistic, your privacy is important to us. We collect basic information 
+              At Freight Logistic, your privacy is important to us. We collect basic information 
               (name, contact details, business data) only to improve our dispatching and 
               customer experience.
             </p>
@@ -30,8 +30,8 @@ export default function PrivacyPage() {
             </p>
             <p className="text-lg text-neutral-700 leading-relaxed">
               For any concerns, contact us at{" "}
-              <a href="mailto:privacy@freightslogistic.com" className="text-black font-medium hover:underline">
-                privacy@freightslogistic.com
+              <a href="mailto:freightlogistic01@gmail.com" className="text-black font-medium hover:underline">
+                freightlogistic01@gmail.com
               </a>
             </p>
           </div>

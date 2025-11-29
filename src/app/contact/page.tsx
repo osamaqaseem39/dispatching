@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact Freights Logistic | 24/7 Truck Dispatching Support",
-  description: "Get in touch with Freights Logistic for truck dispatching, load booking, or support. Our U.S.-based team is available 24/7 to help drivers and fleets nationwide.",
+  title: "Contact Freight Logistic | 24/7 Truck Dispatching Support",
+  description: "Get in touch with Freight Logistic for truck dispatching, load booking, or support. Our U.S.-based team is available 24/7 to help drivers and fleets nationwide.",
 };
 
 import Glows from "@/components/Glows";
@@ -30,33 +30,34 @@ export default function ContactPage() {
               <a href="mailto:freightlogistic01@gmail.com" className="inline-flex items-center rounded-sm border border-neutral-300 px-4 py-2 text-neutral-900 text-sm hover:bg-neutral-100">Email Us</a>
             </div>
           </div>
-          <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4">
+          <form className="rounded-md border border-neutral-200 bg-white p-6 space-y-4" action="mailto:info@freightslogistic.com" method="post" encType="text/plain">
+            <input type="hidden" name="to" value="info@freightslogistic.com" />
             <div>
               <label className="block text-sm font-medium text-neutral-800">Name</label>
-              <input type="text" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Your name" />
+              <input type="text" name="name" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Your name" />
             </div>
             <div>
               <label className="block text-sm font-medium text-neutral-800">Email</label>
-              <input type="email" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="you@example.com" />
+              <input type="email" name="email" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="you@example.com" />
             </div>
             <div>
               <label className="block text-sm font-medium text-neutral-800">Phone</label>
-              <input type="tel" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="(###) ### ####" />
+              <input type="tel" name="phone" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="(###) ### ####" />
             </div>
             <div>
               <label className="block text-sm font-medium text-neutral-800">Truck Type</label>
-              <input type="text" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Dry Van, Reefer, Flatbed, Hotshot, Box Truck, etc." />
+              <input type="text" name="truckType" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" placeholder="Dry Van, Reefer, Flatbed, Hotshot, Box Truck, etc." />
             </div>
             <div>
               <label className="block text-sm font-medium text-neutral-800">Message</label>
-              <textarea className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" rows={4} placeholder="Tell us about your lanes, equipment, and goals" />
+              <textarea name="message" className="mt-1 w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-800" rows={4} placeholder="Tell us about your lanes, equipment, and goals" />
             </div>
-            <button type="button" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Send Request</button>
+            <button type="submit" className="w-full rounded-sm bg-black px-4 py-2 text-white text-sm hover:bg-neutral-800">Send Request</button>
           </form>
         </div>
         <div className="text-center mt-12">
           <p className="text-lg text-neutral-700 font-medium">
-            Start your dispatching journey with Freights Logistic today!
+            Start your dispatching journey with Freight Logistic today!
           </p>
         </div>
       </section>

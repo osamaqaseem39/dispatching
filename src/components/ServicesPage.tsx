@@ -197,7 +197,7 @@ export default function ServicesPage() {
         
         <div className="text-center mt-16">
           <a href="/contact" className="inline-flex items-center rounded-lg bg-black px-8 py-4 text-white text-lg font-medium hover:bg-neutral-800 transition-colors">
-            Ready to roll? Contact Freights Logistic today to start dispatching smarter.
+            Ready to roll? Contact Freight Logistic today to start dispatching smarter.
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
