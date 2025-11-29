@@ -19,7 +19,7 @@ export default function Hero() {
           
           <ScrollAnimation direction="up" delay={200}>
             <p className="text-neutral-300 text-lg md:text-xl">
-              At Freights Logistic, we keep America moving. Our expert dispatchers connect drivers and loads nationwide — ensuring every delivery is on time, efficient, and profitable.
+              At Freight Logistic, we keep America moving. Our expert dispatchers connect drivers and loads nationwide — ensuring every delivery is on time, efficient, and profitable.
             </p>
           </ScrollAnimation>
           
